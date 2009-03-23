@@ -13,6 +13,14 @@
 		A0A2D4F60F7768190083B7C1 /* GeekFaceAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A2D4F40F7768190083B7C1 /* GeekFaceAppDelegate.m */; };
 		A0A2D4F70F7768190083B7C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A2D4F50F7768190083B7C1 /* main.m */; };
 		A0A2D4FA0F776AB30083B7C1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A2D4F90F776AB30083B7C1 /* MainViewController.m */; };
+		A0A2D5160F776D260083B7C1 /* miyagawa.png in Resources */ = {isa = PBXBuildFile; fileRef = A0A2D5150F776D260083B7C1 /* miyagawa.png */; };
+		A0A2D5190F776D340083B7C1 /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A2D5180F776D340083B7C1 /* OverlayView.m */; };
+		A0A2D6530F779E8C0083B7C1 /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A2D6520F779E8C0083B7C1 /* ConfigViewController.m */; };
+		A0A2D6600F77B9960083B7C1 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A0A2D6570F77B91B0083B7C1 /* icon.png */; };
+		A0A2D6C90F77CE380083B7C1 /* mizzy.png in Resources */ = {isa = PBXBuildFile; fileRef = A0A2D6C80F77CE380083B7C1 /* mizzy.png */; };
+		A0A2D6FE0F77D44C0083B7C1 /* jesse.png in Resources */ = {isa = PBXBuildFile; fileRef = A0A2D6FC0F77D44C0083B7C1 /* jesse.png */; };
+		A0A2D6FF0F77D44C0083B7C1 /* nara.png in Resources */ = {isa = PBXBuildFile; fileRef = A0A2D6FD0F77D44C0083B7C1 /* nara.png */; };
+		A0A2D71F0F77DA1C0083B7C1 /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A2D71E0F77DA1C0083B7C1 /* ResultViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +34,17 @@
 		A0A2D4F50F7768190083B7C1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = src/main.m; sourceTree = "<group>"; };
 		A0A2D4F80F776AB30083B7C1 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = src/MainViewController.h; sourceTree = "<group>"; };
 		A0A2D4F90F776AB30083B7C1 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = src/MainViewController.m; sourceTree = "<group>"; };
+		A0A2D5150F776D260083B7C1 /* miyagawa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = miyagawa.png; path = resources/miyagawa.png; sourceTree = "<group>"; };
+		A0A2D5170F776D340083B7C1 /* OverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OverlayView.h; path = src/OverlayView.h; sourceTree = "<group>"; };
+		A0A2D5180F776D340083B7C1 /* OverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OverlayView.m; path = src/OverlayView.m; sourceTree = "<group>"; };
+		A0A2D6510F779E8C0083B7C1 /* ConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConfigViewController.h; path = src/ConfigViewController.h; sourceTree = "<group>"; };
+		A0A2D6520F779E8C0083B7C1 /* ConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConfigViewController.m; path = src/ConfigViewController.m; sourceTree = "<group>"; };
+		A0A2D6570F77B91B0083B7C1 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = resources/icon.png; sourceTree = "<group>"; };
+		A0A2D6C80F77CE380083B7C1 /* mizzy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mizzy.png; path = resources/mizzy.png; sourceTree = "<group>"; };
+		A0A2D6FC0F77D44C0083B7C1 /* jesse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = jesse.png; path = resources/jesse.png; sourceTree = "<group>"; };
+		A0A2D6FD0F77D44C0083B7C1 /* nara.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nara.png; path = resources/nara.png; sourceTree = "<group>"; };
+		A0A2D71D0F77DA1C0083B7C1 /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResultViewController.h; path = src/ResultViewController.h; sourceTree = "<group>"; };
+		A0A2D71E0F77DA1C0083B7C1 /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResultViewController.m; path = src/ResultViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +93,12 @@
 		A0A2D4EF0F7767FC0083B7C1 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				A0A2D71D0F77DA1C0083B7C1 /* ResultViewController.h */,
+				A0A2D71E0F77DA1C0083B7C1 /* ResultViewController.m */,
+				A0A2D6510F779E8C0083B7C1 /* ConfigViewController.h */,
+				A0A2D6520F779E8C0083B7C1 /* ConfigViewController.m */,
+				A0A2D5170F776D340083B7C1 /* OverlayView.h */,
+				A0A2D5180F776D340083B7C1 /* OverlayView.m */,
 				A0A2D4F80F776AB30083B7C1 /* MainViewController.h */,
 				A0A2D4F90F776AB30083B7C1 /* MainViewController.m */,
 				A0A2D4F30F7768190083B7C1 /* GeekFaceAppDelegate.h */,
@@ -86,6 +111,11 @@
 		A0A2D4F00F7768000083B7C1 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				A0A2D6FC0F77D44C0083B7C1 /* jesse.png */,
+				A0A2D6FD0F77D44C0083B7C1 /* nara.png */,
+				A0A2D6C80F77CE380083B7C1 /* mizzy.png */,
+				A0A2D6570F77B91B0083B7C1 /* icon.png */,
+				A0A2D5150F776D260083B7C1 /* miyagawa.png */,
 				A0A2D4F10F77680B0083B7C1 /* Info.plist */,
 			);
 			name = resources;
@@ -133,6 +163,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0A2D5160F776D260083B7C1 /* miyagawa.png in Resources */,
+				A0A2D6600F77B9960083B7C1 /* icon.png in Resources */,
+				A0A2D6C90F77CE380083B7C1 /* mizzy.png in Resources */,
+				A0A2D6FE0F77D44C0083B7C1 /* jesse.png in Resources */,
+				A0A2D6FF0F77D44C0083B7C1 /* nara.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +181,9 @@
 				A0A2D4F60F7768190083B7C1 /* GeekFaceAppDelegate.m in Sources */,
 				A0A2D4F70F7768190083B7C1 /* main.m in Sources */,
 				A0A2D4FA0F776AB30083B7C1 /* MainViewController.m in Sources */,
+				A0A2D5190F776D340083B7C1 /* OverlayView.m in Sources */,
+				A0A2D6530F779E8C0083B7C1 /* ConfigViewController.m in Sources */,
+				A0A2D71F0F77DA1C0083B7C1 /* ResultViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
