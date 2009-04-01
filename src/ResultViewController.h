@@ -9,7 +9,7 @@
 
 @property (nonatomic, retain) UIImage *image;
 @property (nonatomic, retain) UIImageView *imageview;
-@property (nonatomic, retain) OverlayView *overlay;
+@property (nonatomic, assign) OverlayView *overlay;
 
 @end
 

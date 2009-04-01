@@ -2,19 +2,18 @@
 
 @implementation GeekFaceAppDelegate
 
-@synthesize window;
+@synthesize window, view;
 
 -(void)applicationDidFinishLaunching:(UIApplication *)application {
     window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-
-    MainViewController *view = [[MainViewController alloc]
-                                   initWithNibName:nil bundle:nil];
+    view   = [[MainViewController alloc] initWithNibName:nil bundle:nil];
 
     [window addSubview:view.view];
     [window makeKeyAndVisible];
 }
 
 -(void)dealloc {
+    [view release];
     [window release];
     [super dealloc];
 }

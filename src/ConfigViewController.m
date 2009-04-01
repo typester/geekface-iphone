@@ -3,10 +3,10 @@
 @implementation ConfigViewController
 
 -(void)loadView {
-    UIBarButtonItem *back = [[UIBarButtonItem alloc]
+    UIBarButtonItem *back = [[[UIBarButtonItem alloc]
                                 initWithTitle:@"Back"
                                 style:UIBarButtonItemStylePlain
-                                target:self action:@selector(onClose:)];
+                                target:self action:@selector(onClose:)] autorelease];
     self.navigationItem.leftBarButtonItem = back;
 
     tableView = [[UITableView alloc]

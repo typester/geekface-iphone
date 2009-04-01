@@ -8,7 +8,7 @@
 
 -(void)loadView {
     CGRect rect = [[UIScreen mainScreen] applicationFrame];
-    UIView *view = [[UIView alloc] initWithFrame:rect];
+    UIView *view = [[[UIView alloc] initWithFrame:rect] autorelease];
     self.view = view;
 
     imageview = [[UIImageView alloc] initWithImage:image];
@@ -17,32 +17,38 @@
 
     // navigation
     UIToolbar *toolbar =
-        [[UIToolbar alloc]
-            initWithFrame:CGRectMake(0, (rect.size.height - 44), 320, 44)];
+        [[[UIToolbar alloc]
+            initWithFrame:CGRectMake(0, (rect.size.height - 44), 320, 44)] autorelease];
     toolbar.barStyle = UIBarStyleBlackOpaque;
 
     UIBarButtonItem *back =
-        [[UIBarButtonItem alloc]
+        [[[UIBarButtonItem alloc]
             initWithTitle:@"back"
             style:UIBarButtonItemStyleBordered
-            target:self action:@selector(onBack:)];
+            target:self action:@selector(onBack:)] autorelease];
 
     UIBarButtonItem *save =
-        [[UIBarButtonItem alloc]
+        [[[UIBarButtonItem alloc]
             initWithTitle:@"Save"
             style:UIBarButtonItemStyleBordered
-            target:self action:@selector(onSave:)];
+            target:self action:@selector(onSave:)] autorelease];
 
     UIBarButtonItem *space =
-        [[UIBarButtonItem alloc]
+        [[[UIBarButtonItem alloc]
             initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
-            target:nil action:nil];
+            target:nil action:nil] autorelease];
 
     [toolbar setItems:[NSArray arrayWithObjects:back, space, save, nil]];
 
     [view addSubview: imageview];
     [view addSubview: overlay];
     [view addSubview: toolbar];
+}
+
+-(void)dealloc {
+    [image release];
+    [imageview release];
+    [super dealloc];
 }
 
 -(void)onBack:(id)sender {
@@ -59,10 +65,10 @@
 
     UIImageWriteToSavedPhotosAlbum(data, nil, nil, nil);
 
-    UIAlertView *alert = [[UIAlertView alloc]
+    UIAlertView *alert = [[[UIAlertView alloc]
                              initWithTitle:@"Image saved!" message:@""
                              delegate:self cancelButtonTitle:nil
-                             otherButtonTitles:@"OK", nil];
+                              otherButtonTitles:@"OK", nil] autorelease];;
     [alert show];
 
     overlay.userInteractionEnabled = YES;

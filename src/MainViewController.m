@@ -7,9 +7,9 @@
 @synthesize initialDistance;
 
 -(void)loadView {
-    NSLog(@"load main view");
     CGRect rect = [[UIScreen mainScreen] applicationFrame];
-    UIView *view = [[UIView alloc] initWithFrame:rect];
+
+    UIView *view = [[[UIView alloc] initWithFrame:rect] autorelease];
     self.view = view;
 
     // camera preview
@@ -20,6 +20,7 @@
     UIView *preview = [[UIView alloc] initWithFrame:CGRectMake(
             0, 0, rect.size.width, rect.size.height - 44
         )];
+    if ([camera previewView]) [[camera previewView] release];
     object_setInstanceVariable(camera, "_cameraLayer", preview.layer);
     object_setInstanceVariable(camera, "_previewView", preview);
 
@@ -33,26 +34,26 @@
 
     // navigation
     UIToolbar *toolbar =
-        [[UIToolbar alloc]
-            initWithFrame:CGRectMake(0, (rect.size.height - 44), 320, 44)];
+        [[[UIToolbar alloc]
+            initWithFrame:CGRectMake(0, (rect.size.height - 44), 320, 44)] autorelease];
     toolbar.barStyle = UIBarStyleBlackOpaque;
 
     UIBarButtonItem *select =
-        [[UIBarButtonItem alloc]
+        [[[UIBarButtonItem alloc]
             initWithTitle:@"Select geek type"
             style:UIBarButtonItemStyleBordered
-            target:self action:@selector(onSelect:)];
+            target:self action:@selector(onSelect:)] autorelease];
 
     UIBarButtonItem *generate =
-        [[UIBarButtonItem alloc]
+        [[[UIBarButtonItem alloc]
             initWithTitle:@"Generate"
             style:UIBarButtonItemStyleBordered
-            target:self action:@selector(onGenerate:)];
+            target:self action:@selector(onGenerate:)] autorelease];
 
     UIBarButtonItem *space =
-        [[UIBarButtonItem alloc]
+        [[[UIBarButtonItem alloc]
             initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
-            target:nil action:nil];
+            target:nil action:nil] autorelease];
 
     [toolbar setItems:[NSArray arrayWithObjects:select, space, generate, nil]];
 
@@ -60,6 +61,11 @@
     [view addSubview: toolbar];
 
     preview.multipleTouchEnabled = YES;
+}
+
+-(void)dealloc {
+    [overlay release];
+    [super dealloc];
 }
 
 -(void)loadOverlay:(NSInteger)index {
@@ -144,11 +150,11 @@
 }
 
 -(void)onSelect:(id)sender {
-    ConfigViewController *config = [[ConfigViewController alloc]
-                                       initWithNibName:nil bundle:nil];
+    ConfigViewController *config = [[[ConfigViewController alloc]
+                                       initWithNibName:nil bundle:nil] autorelease];
 
-    UINavigationController *nav = [[UINavigationController alloc]
-                                      initWithRootViewController:config];
+    UINavigationController *nav = [[[UINavigationController alloc]
+                                      initWithRootViewController:config] autorelease];
 
     [self presentModalViewController:nav animated:YES];
 }
@@ -170,9 +176,10 @@
         imageProperties:(NSDictionary *)exif {
 
 
-    ResultViewController *result = [[ResultViewController alloc]
-                                       initWithNibName:nil bundle:nil];
+    ResultViewController *result = [[[ResultViewController alloc]
+                                       initWithNibName:nil bundle:nil] autorelease];
     result.image   = preview;
+
     result.overlay = overlay;
     overlay.userInteractionEnabled = NO;
 
