@@ -129,8 +129,8 @@
         CGFloat diff   = currentDistance - initialDistance;
 
         if (abs(diff) >= 1.0) {
-            frame.size.width += diff;
-            frame.size.height += diff;
+            frame.size.width *= (100.0 + diff) / 100.0;
+            frame.size.height *= (100.0 + diff) / 100.0;
 
             if (20 <= frame.size.width && frame.size.width <= 1000 &&
                 20 <= frame.size.height && frame.size.height <= 1000) {
